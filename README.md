@@ -8,6 +8,7 @@ Source file for loading the module: opencall.c
 How to compile and link: make
 The command to insert the module: sudo insmod opencall.ko
 To check if the intercepted call is loaded and working, open /var/log/syslog
+
 Description: We intercepted three calls: close, open and read. The intercepted open call prints the message in the syslog, that indicates the user id, who opened the file and also indicates the path to the file opened.
 For close call, the message printed indicates the user id and the file descriptor. Read call checks for the "VIRUS" string in the opened file. If it sees the string "VIRUS" in the file, it prints a warning message and the file descriptor of the file being scaned.
 Implementation: To implement the read system call, we used the strstr in the kernel space to loop through all the contents of the file. If it contains virus we are printing the warning message.
