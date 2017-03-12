@@ -1,7 +1,7 @@
 # LKM_system_call_interception
 Loadable Kernel Module Programming
 
-Hello, this is the project for system call interceptions that me and my partner Remy Kaldawy were working on.
+Hello, this is the project for system call interceptions that me and my partner Remy Kaldawy were working on for Operating Systems class taught by Professor Craig Shue.
 
 Part 1
 Source file for loading the module: opencall.c
