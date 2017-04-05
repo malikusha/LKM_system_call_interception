@@ -14,8 +14,6 @@ For close call, the message printed indicates the user id and the file descripto
 Implementation: To implement the read system call, we used the strstr in the kernel space to loop through all the contents of the file. If it contains virus we are printing the warning message.
 To implement the open system call, we called the old version of open and then printed the message with id. We obtained id of the user by taking current_pid.val value.
 To implement the close system call, we called the old version of close and printed the message with id and file descriptor.
-The problem we faced when we were working on part 1, we override the read system call and because of that we could not open anything from the virtual machine. All the code was only on one computer without any back up. So, we had to retype all the source file on another computer. We could not use the VM since it crashed flawlessly, thus the checkpoint was submitted later. Professor Shue was notified and has given us extra time for submission.
-
 
 Part 2
 Executable file: proc_ancestry
